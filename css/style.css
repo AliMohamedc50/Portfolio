@@ -32,6 +32,13 @@ body {
 }
 
 
+header,
+.home,
+.about,
+.skills,
+.contact {
+    padding: 2rem 9%;
+}
 
 
 /* Start Header */
@@ -142,6 +149,7 @@ header nav a.active {
     color: var(--bg-color);
     z-index: 1;
     overflow: hidden;
+    cursor: pointer;
 }
 .btn-box .btn::before {
     content: "";
@@ -232,6 +240,8 @@ header nav a.active {
     padding-bottom: 6rem;
     background-color: var(--second-bg-color);
     padding: 2rem 9%;
+    padding-bottom: 7rem;
+
 }
 .heading{
     font-size: 5rem;
@@ -356,3 +366,70 @@ span {
     background-color: var(--main-color);
 }
 /* End skills */
+
+
+
+
+/* Start Contact  */
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+.contact form .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-field input , 
+.texterea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: .6rem ;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-field input::placeholder , 
+.texterea-field textarea::placeholder {
+    color: var(--text-color);
+}
+.texterea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.texterea-field textarea {
+    resize: none;
+}
+form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    border-radius: .6rem;
+    z-index: -2;
+} 
+
+
+.contact form .input-field input:focus.focus , 
+.texterea-field textarea:focus.focus {
+    width: 100%;
+}
+/* End Contact  */
