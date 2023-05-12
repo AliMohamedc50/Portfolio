@@ -433,3 +433,36 @@ form .focus {
     width: 100%;
 }
 /* End Contact  */
+
+
+
+
+/* Start Footer  */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--second-bg-color);
+    padding: 2rem 9%;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+
+.footer-icontop a{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+}
+.footer-icontop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+/* End Footer  */
