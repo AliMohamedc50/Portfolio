@@ -54,8 +54,11 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    transition: .3s;
 }
-
+header.sticky {
+    background-color: yellowgreen;
+}
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
@@ -466,3 +469,32 @@ footer {
     color: var(--second-bg-color);
 }
 /* End Footer  */
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem ;
+    }
+    .home {
+        padding: 0 4%;
+    }
+    footer {
+        padding: 2rem 4%;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        background: var(--bg-color);
+    }
+    #menu-icon {
+        display: block;
+    }
+}
