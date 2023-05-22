@@ -2,12 +2,22 @@
 let menuIcon = document.getElementById("menu-icon")
 let navbar = document.querySelector(".navbar")
 
+let ghostNav = document.querySelector(".ghost")
+
+let navbarA = document.querySelectorAll(".navbar a")
+
+
 menuIcon.addEventListener("click", closeNave )
+
+navbarA.forEach((ee) => {
+    ee.addEventListener("click", closeNave )
+})
 
 
 
 function closeNave()  {
     navbar.classList.toggle("active")
+    ghostNav.classList.toggle("active")
 }
 
 

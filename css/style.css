@@ -120,6 +120,25 @@ header nav a.active {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color),var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0 ;
+    animation: homeText 6s linear infinite;
+    animation-delay: 2s;
+
+}
+.home-content .text-animate h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    animation: homecursorText 6s linear infinite;
+    animation-delay: 2s;
+    /* z-index: -1; */
 }
 
 .home-content p {
@@ -508,8 +527,24 @@ footer {
         box-shadow: 0 .5rem 1rem  rgba(0, 0, 0 , .2);
         z-index: -5;
         transition: .2s ease;
+        overflow: hidden;
     }
-    
+    .ghost {
+        position: absolute;
+        background-color: var(--main-color);
+        width: 122%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        z-index: -2;
+
+    }
+    .ghost.active{
+        /* left: 0; */
+        top: 100%;
+        transition: .3s;
+        transition-delay: .15s;
+    }
     .navbar.active {
         top: 100%;
     }
@@ -517,5 +552,78 @@ footer {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    html {
+        font-size: 50%;
+        background-color: #041117;
+    }
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-sic a {
+        width: 38px;
+        height: 38px;
+    }
+    form .input-box .input-field {
+        width: 100%;
+    }
+    footer {
+        flex-direction: column-reverse;
+        
+    }
+    footer p{
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+    .home-content {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .home-content h1 span{
+        font-size: 90% ; 
+    }
+}
+
+
+@keyframes homeText {
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0 ;
+    }
+    65%,
+    85% {
+        background-position: 0 0 ;
+    }
+}
+@keyframes homecursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
     }
 }
