@@ -1,6 +1,3 @@
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,27 +8,20 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
-
 :root {
     --bg-color: #041117 ;
     --second-bg-color: #112e42 ;
     --text-color: #ededed ;
     --main-color: #00abf0;
 } 
-
-
 html {
     font-size: 62.5%;
     /* overflow: hidden; */
 }
-
-
 body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-
 header,
 .home,
 .about,
@@ -39,10 +29,7 @@ header,
 .contact {
     padding: 2rem 9%;
 }
-
-
 /* Start Header */
-
 header {
     position: fixed;
     top: 0;
@@ -64,33 +51,23 @@ header.sticky {
     color: var(--text-color);
     font-weight: 600;
 }
-
-
 header nav a {
     color: var(--text-color);
     font-size: 1.7rem;
     font-weight: 500;
     margin-left: 3.5rem;
 }
-
 header nav a:hover ,
 header nav a.active {
     color: var(--main-color);
 }
-
-
-
 #menu-icon {
     font-size: 3.5rem;
     color: var(--text-color);
     cursor: pointer;
     display: none;
-
 }
 /* End Header */
-
-
-
 .home {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -101,7 +78,6 @@ header nav a.active {
     background-size: cover;
     background-position: center;
 }
-
 .home-content {
     width: 60rem;
 }
@@ -110,7 +86,6 @@ header nav a.active {
     line-height: 1.3;
     font-weight: 700;
 }
-
 .home-content .text-animate {
     position: relative;
     width: 32.8rem;
@@ -126,7 +101,6 @@ header nav a.active {
     background-position: 0 0 ;
     animation: homeText 6s linear infinite;
     animation-delay: 2s;
-
 }
 .home-content .text-animate h3::before {
     content: "";
@@ -140,14 +114,10 @@ header nav a.active {
     animation-delay: 2s;
     /* z-index: -1; */
 }
-
 .home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
-
-
-
 .btn-box {
     position: relative;
     display: flex;
@@ -187,11 +157,9 @@ header nav a.active {
 .btn-box .btn:hover::before {
     width: 100%;
 }
-
 .btn-box .btn:nth-child(1):hover {
     color: var(--main-color);
 }
-
 .btn-box .btn:nth-child(2) {
     background: transparent;
     color: var(--main-color);
@@ -202,12 +170,7 @@ header nav a.active {
 .btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
 }
-
-
 .home-sic {
-    /* position: relative;
-    bottom: 0;
-    left: 0; */
     padding-top: 50px;
     width: 170px;
     display: flex;
@@ -227,10 +190,7 @@ header nav a.active {
     color: var(--main-color);
     z-index: 11;
     overflow: hidden;
-
-
 }
-
 .home-sic a::before {
     position: absolute;
     content: "";
@@ -242,16 +202,12 @@ header nav a.active {
     transition: .3s;
     z-index: -1;
 }
-
 .home-sic a:hover {
     color: var(--bg-color);
 }
 .home-sic a:hover::before {
     width: 100%;
 }
-
-
-
 /* Start About */
 .about {
     display: flex;
@@ -263,14 +219,12 @@ header nav a.active {
     background-color: var(--second-bg-color);
     padding: 2rem 9%;
     padding-bottom: 7rem;
-
 }
 .heading{
     font-size: 5rem;
     margin-bottom: 5rem;
     text-align: center;
 }
-
 .about-img {
     position: relative;
     width: 25rem;
@@ -283,7 +237,6 @@ header nav a.active {
 span {
     color: var(--main-color);
 }
-
 .about-img img {
     width: 90%;
     border-radius: 50%;
@@ -304,11 +257,9 @@ span {
     transform: translate(-50%, -50%) rotate(0);
     animation: spinner 6s linear infinite;
 }
-
 .about-content {
     text-align: center;
 }
-
 .about-content h3 {
     font-size: 2.6rem;
 }
@@ -324,15 +275,11 @@ span {
     background: var(--second-bg-color);
 }
 /* End About */
-
-
-
 /* Start skills */
 .skills {
     min-height: auto;
     padding-top: 10rem;
     padding-bottom: 7rem;
-    /* background-color: ; */
 }
 .skills .skills-row {
     display: flex;
@@ -342,7 +289,6 @@ span {
 .skills-row .skills-column {
     flex: 1 1 40rem;
 }
-
 .skills-column .title {
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
@@ -391,10 +337,6 @@ span {
     background-color: var(--main-color);
 }
 /* End skills */
-
-
-
-
 /* Start Contact  */
 .contact {
     min-height: auto;
@@ -416,7 +358,6 @@ span {
     width: 49%;
     margin: .8rem 0;
 }
-
 .contact form .input-field input , 
 .texterea-field textarea {
     width: 100%;
@@ -428,7 +369,6 @@ span {
     border-radius: .6rem ;
     border: .2rem solid var(--main-color);
 }
-
 .contact form .input-field input::placeholder , 
 .texterea-field textarea::placeholder {
     color: var(--text-color);
@@ -451,17 +391,11 @@ form .focus {
     border-radius: .6rem;
     z-index: -2;
 } 
-
-
 .contact form .input-field input:focus.focus , 
 .texterea-field textarea:focus.focus {
     width: 100%;
 }
 /* End Contact  */
-
-
-
-
 /* Start Footer  */
 footer {
     display: flex;
@@ -470,12 +404,9 @@ footer {
     background: var(--second-bg-color);
     padding: 2rem 9%;
 }
-
 .footer-text p {
     font-size: 1.6rem;
 }
-
-
 .footer-icontop a{
     position: relative;
     display: inline-block;
@@ -491,8 +422,6 @@ footer {
     color: var(--second-bg-color);
 }
 /* End Footer  */
-
-
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -539,7 +468,6 @@ footer {
         top: -100%;
         left: 0;
         z-index: -2;
-
     }
     .ghost.active{
         /* left: 0; */
@@ -555,12 +483,8 @@ footer {
         font-size: 2rem;
         margin: 3rem 0;
     }
-
 }
-
-
 @media (max-width: 520px) {
-
     html {
         font-size: 50%;
         background-color: #041117;
@@ -598,8 +522,6 @@ footer {
         font-size: 90% ; 
     }
 }
-
-
 @keyframes homeText {
     0%,
     10%,
@@ -623,7 +545,6 @@ footer {
         width: 100%;
         opacity: 1;
     }
-
     75%,
     81% {
         opacity: 0;
@@ -633,5 +554,4 @@ footer {
     100% {
         transform: translate(-50%, -50%) rotate(-360deg);
     }
-
 }
