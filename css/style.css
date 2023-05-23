@@ -289,7 +289,7 @@ span {
     border-radius: 50%;
     border: .2rem solid var(--main-color) ;
 }
-.circle-img {
+.about-img .circle-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -301,6 +301,8 @@ span {
     border-bottom: .2rem solid var(--second-bg-color) ;
     border-left: .2rem solid var(--main-color) ;
     border-right: .2rem solid var(--main-color) ;
+    transform: translate(-50%, -50%) rotate(0);
+    animation: spinner 6s linear infinite;
 }
 
 .about-content {
@@ -626,4 +628,10 @@ footer {
     81% {
         opacity: 0;
     }
+}
+@keyframes spinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+
 }
