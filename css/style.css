@@ -16,7 +16,6 @@
 } 
 html {
     font-size: 62.5%;
-    /* overflow: hidden; */
 }
 body {
     background: var(--bg-color);
@@ -219,6 +218,7 @@ header nav a.active {
     background-color: var(--second-bg-color);
     padding: 2rem 9%;
     padding-bottom: 7rem;
+    /* height: 100vh; */
 }
 .heading{
     font-size: 5rem;
@@ -281,61 +281,26 @@ span {
     padding-top: 10rem;
     padding-bottom: 7rem;
 }
-.skills .skills-row {
+.skills div:first-of-type {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 20px;
+    justify-content: center;
 }
-.skills-row .skills-column {
-    flex: 1 1 40rem;
+.skills .hold-img {
+    cursor: pointer;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 50%;
 }
-.skills-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem;
-}
-.skills-box .skills-content {
-    position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    padding: .5rem 1.5rem;
-}
-.skills-box .skills-content::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-.skills-box .skills-content:hover::before {
+.skills .hold-img img {
     width: 100%;
-} 
-.skills-content .progress {
-    padding: 1rem 0;
-}
-.skills-content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
-}
-.skills-content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem ;
-    border: .2rem solid var(--main-color);
-    padding: .5rem;
-    margin: 1rem 0;
-}
-.skills-content .progress .bar span {
-    transition: 1s ;
-    display: block;
     height: 100%;
-    width: 0;
-    border-radius: .3rem;
-    background-color: var(--main-color);
+        object-fit: cover;
 }
+
 /* End skills */
 /* Start Contact  */
 .contact {
@@ -506,6 +471,10 @@ footer {
     }
     footer p{
         margin-top: 3rem;
+    }
+    .skills .hold-img {
+        width: 60px;
+        height: 60px;
     }
 }
 @media (max-width: 371px) {

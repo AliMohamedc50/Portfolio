@@ -6,29 +6,22 @@ let ghostNav = document.querySelector(".ghost")
 
 let navbarA = document.querySelectorAll(".navbar a")
 
-
 menuIcon.addEventListener("click", closeNave )
 
 navbarA.forEach((ee) => {
     ee.addEventListener("click", closeNave )
 })
 
-
-
 function closeNave()  {
     navbar.classList.toggle("active")
     ghostNav.classList.toggle("active")
 }
 
-
 let sections = document.querySelectorAll("section")
 let navLinks = document.querySelectorAll("header .navbar a")
 
-
-// console.log(navLinks)
 navLinks.forEach((linke) => 
     linke.onclick = function(e) {
-        // linke.addEventListener("click", closeNave )
 
         navLinks.forEach((aa) => {
             aa.classList.remove("active")
@@ -40,53 +33,35 @@ navLinks.forEach((linke) =>
         })
 })
 
+let widthBarSkill = document.querySelectorAll(".bar span")
 
+widthBarSkill.forEach((bar) => {
+    bar.style.width = bar.dataset.widthbar
+})
 
+let links = document.querySelectorAll("nav a")
+links.forEach((ele) => {
+        document.querySelector(ele.dataset.scroll).scrollIntoView({
+            behavior : 'smooth'
+        })
+    // }
+})
 
+function sendMail() {
+    var params = { 
+        from_name : document.getElementById("from_name").value,
+        email_id : document.getElementById("email_id").value,
+        mobile_number : document.getElementById("mobile_number").value,
+        email_subject : document.getElementById("email_subject").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_tuhn89h", "template_ma3p18g", params ).then(function (res) {
+        alert("success!" + res.status);
+    })
+}
 
+let sub = document.querySelector(".btn")
 
-
-// window.onscroll = () => {
-
-//     sections.forEach((sec) => {
-//         let top = window.scrollY ;
-//         let offset = sec.offsetTop - 100;
-//         let height = sec.offsetHeight;
-//         let id = sec.getAttribute('id');
-//         // let .offsetHeight;
-//         if (top >= offset && top < offset + height) {
-//             // active navbar Links
-//             navLinks.forEach((links) => {
-//             links.classList.remove('active');
-//             document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-//         });
-//     }
-//     // let header = document.querySelector("header")
-
-//     // header.classList.toggle("sticky", window.scrollY > 100)
-
-// })
-// }
-
-
-
-// let widthBarSkill = document.querySelectorAll(".bar span")
-
-// widthBarSkill.forEach((bar) => {
-//     bar.style.width = bar.dataset.widthbar
-// })
-
-// let links = document.querySelectorAll("nav a")
-// links.forEach((ele) => {
-//     // ele.onclick = function(e) {
-//     //     links.forEach((mm) => {
-//     //         mm.classList.remove("active")
-//     //     })
-//     //     ele.classList.add("active")
-//         document.querySelector(ele.dataset.scroll).scrollIntoView({
-//             behavior : 'smooth'
-//         })
-//     // }
-// })
-
-// console.log(links)
+sub.onclick = function (e) { 
+    e.preventDefault();
+}
