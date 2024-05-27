@@ -46,22 +46,3 @@ links.forEach((ele) => {
         })
     // }
 })
-
-function sendMail() {
-    var params = { 
-        from_name : document.getElementById("from_name").value,
-        email_id : document.getElementById("email_id").value,
-        mobile_number : document.getElementById("mobile_number").value,
-        email_subject : document.getElementById("email_subject").value,
-        message : document.getElementById("message").value
-    }
-    emailjs.send("service_tuhn89h", "template_ma3p18g", params ).then(function (res) {
-        alert("success!" + res.status);
-    })
-}
-
-let sub = document.querySelector(".btn")
-
-sub.onclick = function (e) { 
-    e.preventDefault();
-}
