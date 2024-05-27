@@ -25,7 +25,8 @@ header,
 .home,
 .about,
 .skills,
-.contact {
+.contact,
+.projects {
     padding: 2rem 9%;
 }
 /* Start Header */
@@ -170,7 +171,7 @@ header nav a.active {
     color: var(--bg-color);
 }
 .home-sic {
-    padding-top: 50px;
+    padding-top: 0px;
     width: 170px;
     display: flex;
     justify-content: space-between;
@@ -361,6 +362,65 @@ form .focus {
     width: 100%;
 }
 /* End Contact  */
+/* Start Project  */
+.hold-card-porjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.hold-card-porjects a {
+    color: white;
+    font-weight: bold;
+}
+.projects-card {
+    padding-bottom: 10px;
+    width: 300px;
+    height: 382px;
+    background: var(--second-bg-color);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.hold-img-projects {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.hold-img-projects img {
+    width: 100%;
+}
+.details {
+    padding: 10px;
+}
+.details p {
+    margin-top: 5px;
+}
+.tech {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tech span {
+    padding: 5px 7px;
+    border-radius: 50px;
+    background: var(--bg-color);
+}
+.btn-box-pro {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.btn-box-pro .btn-pro {
+    background: #0473e2;
+    padding: 10px 20px;
+    border: 1px solid #040746;
+    border-radius: 30px;
+    font-size: 13px;
+}
+/* End Project  */
+
 /* Start Footer  */
 footer {
     display: flex;
